@@ -12,30 +12,30 @@ Une application de prise de notes légère et rapide, réalisée avec React + Ty
 
 ### Installation
 
-\`\`\`bash
+```bash
 pnpm install
-\`\`\`
+```
 
 ### Lancer en local
 
-\`\`\`bash
+```bash
 pnpm dev
-\`\`\`
+```
 
 Ouvrez `http://localhost:5173`.
 
 ### Compilation
 
-\`\`\`bash
+```bash
 pnpm build
-\`\`\`
+```
 
 ### Format & Lint (si configuré)
 
-\`\`\`bash
+```bash
 pnpm lint
 pnpm format
-\`\`\`
+```
 
 ## ✨ Fonctionnalités clés
 
