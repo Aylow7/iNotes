@@ -1,67 +1,75 @@
 # iNotes
 
-Une application de prise de notes légère créée avec React + TypeScript + Vite.
+![Taille du repo](https://img.shields.io/github/repo-size/Aylow7/iNotes?style=flat-square)
+![Étoiles GitHub](https://img.shields.io/github/stars/Aylow7/iNotes?style=flat-square)
+![Forks GitHub](https://img.shields.io/github/forks/Aylow7/iNotes?style=flat-square)
+![Issues GitHub](https://img.shields.io/github/issues/Aylow7/iNotes?style=flat-square)
+![Licence](https://img.shields.io/github/license/Aylow7/iNotes?style=flat-square)
 
-## 🚀 Présentation
+Une application de prise de notes légère et rapide, réalisée avec React + TypeScript + Vite.
 
-`iNotes` est conçu pour une création et une gestion de notes locales ultra-rapide dans le navigateur.
+## 🚀 Démarrage rapide
 
-Fonctionnalités principales :
+### Installation
 
-- Créer, modifier et supprimer des notes
-- Stockage persistant via localStorage
-- Raccourcis clavier pour gagner en efficacité
-- Interface propre et responsive
+\`\`\`bash
+pnpm install
+\`\`\`
 
-## 🧩 Fonctionnalités
+### Lancer en local
 
-- Ajout instantané de nouvelles notes
-- Sélection et édition des notes existantes
-- Sauvegarde automatique dans le navigateur
-- Recherche et filtre de notes (à implémenter)
-- Structure de projet simple et facile à personnaliser
+\`\`\`bash
+pnpm dev
+\`\`\`
 
-## 🛠️ Stack technique
+Ouvrez `http://localhost:5173`.
+
+### Compilation
+
+\`\`\`bash
+pnpm build
+\`\`\`
+
+### Format & Lint (si configuré)
+
+\`\`\`bash
+pnpm lint
+pnpm format
+\`\`\`
+
+## ✨ Fonctionnalités clés
+
+- Créer, modifier, supprimer des notes
+- Persistance dans localStorage
+- Recherche & filtrage de notes (amélioration future)
+- Raccourcis clavier
+- Architecture componentisée
+
+## 🗂️ Structure du projet
+
+- `src/`
+  - `components/`
+    - `editor/`
+    - `sidebar/`
+    - `topbar/`
+  - `hooks/`
+  - `store/`
+  - `styles/`
+
+## 🛠️ Stack
 
 - React
 - TypeScript
 - Vite
-- Zustand (ou autre gestion d'état dans `src/store`)
+- Zustand (store d'état)
 
-## ▶️ Exécution locale
+## 🌱 Contribution
 
-```bash
-pnpm install
-pnpm dev
-```
-
-Ouvrez `http://localhost:5173` dans votre navigateur.
-
-## ✔️ Build
-
-```bash
-pnpm build
-```
-
-## 🧪 Tests
-
-Ajoutez des tests si nécessaire. Exemple avec Jest/React Testing Library :
-
-```bash
-pnpm test
-```
-
-## 📁 Structure du projet
-
-- `src/` - source de l'application
-  - `components/` - composants UI
-  - `hooks/` - hooks personnalisés
-  - `store/` - gestion d'état (Zustand)
-
-## 🛡️ Notes
-
-- Ce projet stocke les notes localement.
-- Pour synchronisation multi-appareils, ajoutez un backend ou une solution cloud.
+1. Forkez le repo
+2. Créez une branche : `git checkout -b feature/ma-fonctionnalite`
+3. Commettez : `git commit -m 'feat: ...'`
+4. Poussez : `git push origin feature/ma-fonctionnalite`
+5. Ouvrez une PR
 
 ## 🏷️ Licence
 
