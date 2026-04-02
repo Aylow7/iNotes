@@ -5,6 +5,7 @@
 ![Forks GitHub](https://img.shields.io/github/forks/Aylow7/iNotes?style=flat-square)
 ![Issues GitHub](https://img.shields.io/github/issues/Aylow7/iNotes?style=flat-square)
 ![Licence](https://img.shields.io/github/license/Aylow7/iNotes?style=flat-square)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fad6ac59-fc06-488d-a6e3-ebcbab520381/deploy-status)](https://app.netlify.com/projects/inote00/deploys)
 
 Une application de prise de notes légère et rapide, réalisée avec React + TypeScript + Vite.
 
