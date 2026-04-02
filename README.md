@@ -6,7 +6,8 @@
 ![GitHub issues](https://img.shields.io/github/issues/Aylow7/iNotes?style=flat-square)
 ![License](https://img.shields.io/github/license/Aylow7/iNotes?style=flat-square)
 
-A lightweight, fast note-taking web app built with React + TypeScript + Vite.
+> ![IMPORTANT]
+> A lightweight, fast note-taking web app built with React + TypeScript + Vite.
 
 ## 🚀 Quick start
 
