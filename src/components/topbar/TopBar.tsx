@@ -1,23 +1,34 @@
 import React from 'react';
 import { useNotesStore } from '../../store/useNotesStore';
-import { Search, Eye, Edit3 } from 'lucide-react';
+import { Search, Eye, Edit3, ChevronLeft } from 'lucide-react';
 import { motion, LayoutGroup } from 'framer-motion';
 
 export const TopBar: React.FC = () => {
-  const { searchQuery, setSearchQuery, isMarkdownMode, toggleMarkdownMode } = useNotesStore();
+  const { searchQuery, setSearchQuery, isMarkdownMode, toggleMarkdownMode, setActiveNote, activeNoteId } = useNotesStore();
 
   return (
     <div className="topbar">
-      <div className="search-container glow-focus">
-        <Search size={16} className="search-icon" />
-        <input
-          type="text"
-          placeholder="Search notes... (Ctrl+F)"
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          className="search-input"
-          id="search-input"
-        />
+      <div className="topbar-left">
+        {activeNoteId && (
+          <button 
+            className="back-btn mobile-only" 
+            onClick={() => setActiveNote(null)}
+            aria-label="Back to notes"
+          >
+            <ChevronLeft size={24} />
+          </button>
+        )}
+        <div className="search-container glow-focus">
+          <Search size={16} className="search-icon" />
+          <input
+            type="text"
+            placeholder="Search notes..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="search-input"
+            id="search-input"
+          />
+        </div>
       </div>
 
       <div className="mode-toggle">
@@ -63,6 +74,21 @@ export const TopBar: React.FC = () => {
           justify-content: space-between;
           background-color: var(--bg-color);
           border-bottom: 1px solid #222;
+          gap: 12px;
+        }
+
+        .topbar-left {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          flex: 1;
+        }
+
+        .back-btn {
+          color: var(--text-color);
+          padding: 8px;
+          margin-left: -8px;
+          display: none; /* Hidden by default, shown on mobile via media query */
         }
 
         .search-container {
@@ -83,6 +109,7 @@ export const TopBar: React.FC = () => {
         .search-input {
           flex: 1;
           font-size: 0.9rem;
+          min-width: 0;
         }
 
         .mode-toggle {
@@ -125,6 +152,34 @@ export const TopBar: React.FC = () => {
           background-color: var(--accent-color);
           border-radius: 8px;
           z-index: 0;
+        }
+
+        @media (max-width: 768px) {
+          .topbar {
+            padding: 0 16px;
+          }
+          
+          .back-btn.mobile-only {
+            display: flex;
+          }
+
+          .search-container {
+            width: auto;
+            flex: 1;
+          }
+
+          .toggle-text {
+            display: none;
+          }
+
+          .toggle-btn {
+            min-width: 44px;
+            padding: 8px;
+          }
+
+          .search-input::placeholder {
+            color: transparent;
+          }
         }
       `}</style>
     </div>

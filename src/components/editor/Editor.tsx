@@ -118,6 +118,12 @@ export const Editor: React.FC = () => {
           margin: 0 auto;
         }
 
+        @media (max-width: 768px) {
+          .editor-wrapper {
+            padding: 24px 20px;
+          }
+        }
+
         .raw-textarea {
           width: 100%;
           height: 100%;
@@ -135,6 +141,12 @@ export const Editor: React.FC = () => {
           margin: 0 auto;
           line-height: 1.7;
           color: var(--text-color);
+        }
+
+        @media (max-width: 768px) {
+          .markdown-preview {
+            padding: 24px 20px;
+          }
         }
 
         /* Markdown Styles */

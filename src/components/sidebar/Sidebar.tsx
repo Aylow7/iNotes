@@ -69,6 +69,14 @@ export const Sidebar: React.FC = () => {
           display: flex;
           flex-direction: column;
           user-select: none;
+          transition: transform 0.3s var(--easing), width 0.3s var(--easing);
+        }
+
+        @media (max-width: 768px) {
+          .sidebar {
+            width: 100%;
+            border-right: none;
+          }
         }
 
         .sidebar-header {
@@ -110,7 +118,6 @@ export const Sidebar: React.FC = () => {
           align-items: center;
           transition: background-color 0.2s var(--easing);
           position: relative;
-          group: hover;
         }
 
         .note-item:hover {
